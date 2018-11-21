@@ -35,3 +35,4 @@ with open(file, encoding='utf8') as f:
     print(soup.find_all(attrs={
         'class': True
     }))
+    # selector
