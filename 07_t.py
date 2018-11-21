@@ -15,7 +15,7 @@ with open(file, encoding='utf8') as f:
     # print(6, soup.h3['class'])  # 多值属性
     # print(7, soup.p.string)  # 返回输出标记内只包含的文本，包含其他则返回None
     # print(8, ''.join(soup.div.strings))  # 返回生成器
-    print(80, " ".join(soup.div.stripped_strings))  # 去除多余空白符
+    # print(80, " ".join(soup.div.stripped_strings))  # 去除多余空白符
     # print(9, soup.img.get('src'))
     # soup.img['src'] = 'wwww.xixixi.com'  # 修改属性
     # print(90, soup.img.get('src'))
@@ -29,4 +29,9 @@ with open(file, encoding='utf8') as f:
     # print(list(soup.p.next_element))
     # print(soup.p.next_element.next_element)
     # find系
-    print(soup.find_all(name=['p', re.compile('h\d')]))  # 三种方法，正则，列表
+    # print(soup.find_all(name=['p', re.compile('h\d')]))  # 三种方法，正则，列表
+    # print(soup.find_all(id=re.compile('\d+')))
+    print(soup.find_all(id=True, src=True))  # and
+    print(soup.find_all(attrs={
+        'class': True
+    }))
